@@ -1,0 +1,30 @@
+{
+  "permissions": {
+    "allow": [
+      "Shell(where python python3 py 2>nul & echo \"---\" & where pdftotext 2>nul & echo \"---\" & where node 2>nul)",
+      "Shell(python -c import sys; print(sys.version) 2 >& 1)",
+      "Shell(python -c import pypdf; print('pypdf ok') 2 >& 1)",
+      "Shell(python -c import fitz; print('fitz ok') 2 >& 1)",
+      "Shell(python -c import pdfminer; print('pdfminer ok') 2 >& 1)",
+      "Shell(python -m pip install pypdf --quiet 2 >& 1)",
+      "Shell(python -m pip install pypdf --quiet 2>&1)",
+      "Shell(python -c \"from pypdf import PdfReader; r = PdfReader(r'D:\\Semester 5\\PemWeb_Praktikum\\Modul 1 Praktikum PAW 2026.pdf'); print('PAGES', len(r.pages)); [print('=== PAGE', i+1, '==='); print(p.extract_text()) for i,p in enumerate(r.pages)]\" 2>&1)",
+      "Shell(python \"C:\\Users\\USERHP~1\\AppData\\Local\\Temp\\commandcode\\C--Users-USER-HP-Downloads-Tugas-codeblock-Kuliah-Pemrograman-Web-dan-Aplikasi-Praktikum-Week-1-latihan\\19b96e51-dc5f-4a8c-ad3f-43a653cc0bf1\\scratchpad\\extract_pdf.py\" 2>&1)",
+      "Shell(python \"C:\\Users\\USERHP~1\\AppData\\Local\\Temp\\commandcode\\C--Users-USER-HP-Downloads-Tugas-codeblock-Kuliah-Pemrograman-Web-dan-Aplikasi-Praktikum-Week-1-latihan\\19b96e51-dc5f-4a8c-ad3f-43a653cc0bf1\\scratchpad\\extract_tail.py\" 2>&1)",
+      "Shell(git:*)",
+      "Shell(node -v 2 >& 1)",
+      "Shell(npm:*)",
+      "Shell(code:*)",
+      "Shell(ver:*)",
+      "Shell(curl.exe:*)",
+      "Shell(findstr:*)",
+      "Shell(dir /b modul-01.md 2>nul & echo \"---\" & dir /b docs 2>nul)",
+      "Shell(mkdir \"docs\\praktikum\" 2>nul & move \"modul-01.md\" \"docs\\praktikum\\modul-01.md\" & echo \"=== hasil ===\" & dir /s /b modul-01.md)",
+      "Shell(move:*)",
+      "Shell(rmdir:*)",
+      "Shell(dir:*)"
+    ],
+    "deny": [],
+    "defaultMode": "default"
+  }
+}
